@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Birthday Made With Love</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ background:radial-gradient(circle at top,#64202e,#210b12 65%,#10070a);
+ color:#fff4e8;
+ font-family:Georgia,serif;
+ text-align:center;
+ min-height:100vh;
+}
+.page{
+ display:none;
+ min-height:100vh;
+ padding:65px 20px;
+ align-items:center;
+ justify-content:center;
+ flex-direction:column;
+ animation:fade .8s;
+}
+.page.active{display:flex}
+@keyframes fade{
+ from{opacity:0;transform:translateY(15px)}
+ to{opacity:1;transform:translateY(0)}
+}
+h1{
+ color:#f2cf91;
+ font-size:clamp(35px,7vw,60px);
+ font-weight:normal;
+}
+h2{color:#edc78b;font-weight:normal;font-size:30px}
+p{font-size:18px;line-height:1.9;max-width:650px}
+.gold{color:#f1cb8c}
+.heart{font-size:55px;animation:pulse 1.5s infinite}
+@keyframes pulse{50%{transform:scale(1.2)}}
+.card{
+ max-width:700px;width:100%;
+ padding:35px 25px;
+ border:1px solid #c69b64;
+ border-radius:22px;
+ background:#ffffff0b;
+ box-shadow:0 0 35px #d5a45b20;
+}
+button{
+ background:linear-gradient(120deg,#d8ae70,#f5d9a5);
+ color:#35121b;
+ border:0;border-radius:30px;
+ padding:14px 32px;
+ font-size:16px;
+ cursor:pointer;
+ margin:12px;
+ font-weight:bold;
+}
+button:hover{transform:scale(1.05)}
+.small{font-size:14px;color:#d6b99c}
+.decoration{color:#e8bd7b;letter-spacing:8px}
+input{
+ max-width:90%;padding:12px;
+ border-radius:10px;margin:10px;
+}
+audio{max-width:100%;margin:15px}
+</style>
+</head>
+
+<body>
+
+<section class="page active">
+<div class="decoration">✦ ✧ ✦ ✧ ✦</div>
+<div class="heart">♡</div>
+<p class="gold">A little surprise, made with love</p>
+<h1>Happy Birthday!</h1>
+<p>Today is not just another day. It's a celebration of someone truly special.</p>
+<p class="small">A little world of wishes, memories and prayers awaits you...</p>
+<button onclick="nextPage()">Open Your Surprise ♡</button>
+</section>
+
+<section class="page">
+<div class="card">
+<div class="heart">♥</div>
+<h1>A Special Day</h1>
+<p>Some people make ordinary moments feel extraordinary. Today is all about celebrating you and the happiness you bring into this world.</p>
+<p class="gold">May your smile always find a reason to shine.</p>
+</div>
+<button onclick="nextPage()">Next Surprise →</button>
+</section>
+
+<section class="page">
+<div class="card">
+<h2>My Heartfelt Wishes</h2>
+<p>May Allah bless you with endless happiness.</p>
+<p>May every difficulty turn into ease.</p>
+<p>May your dreams find beautiful ways to come true.</p>
+<p>May your heart always remain peaceful.</p>
+<p>May you receive more than what you silently pray for.</p>
+<p>May Allah protect you from every sadness and bless your life with barakah.</p>
+<p class="gold">Ameen, Sum Ameen. ♡</p>
+</div>
+<button onclick="nextPage()">Keep Going →</button>
+</section>
+
+<section class="page">
+<div class="card">
+<h2>A Little Letter For You</h2>
+<p>
+I wish I could put into words just how special this day is.
+You deserve happiness that stays, peace that never fades,
+and countless reasons to smile.
+</p>
+<p>
+Thank you for being a beautiful part of my memories.
+I hope this new chapter of your life brings you closer
+to everything your heart wishes for.
+</p>
+<p class="gold">With lots of love and the warmest wishes. ♡</p>
+</div>
+<button onclick="nextPage()">One More Thing →</button>
+</section>
+
+<section class="page">
+<div class="card">
+<h2>A Prayer For Your Life</h2>
+<p>Ya Allah, bless this beautiful soul with good health, a long life filled with goodness, success, peace and happiness.</p>
+<p>Keep every hardship away, open doors of halal rizq, grant beautiful opportunities and make every coming year better than the last.</p>
+<p>Protect their smile, their dreams and their heart.</p>
+<h2 class="gold">Ameen Ya Rabb-ul-Alameen ♡</h2>
+</div>
+<button onclick="nextPage()">Continue →</button>
+</section>
+
+<section class="page">
+<div class="card">
+<h2>A Song For You ♫</h2>
+<p>A little melody to make your birthday even more special.</p>
+<p class="small">Your song will be added here.</p>
+<audio id="song" controls>
+<source src="song.mp3" type="audio/mpeg">
+</audio>
+<p class="small">The song will play after you add your audio file to the website.</p>
+</div>
+<button onclick="nextPage()">Next →</button>
+</section>
+
+<section class="page">
+<div class="card">
+<h2>A Personal Voice Wish ♡</h2>
+<p>Some wishes are better heard than read.</p>
+<p class="gold">A little voice message, recorded especially for this day.</p>
+<audio id="voice" controls>
+<source src="voice-note.mp3" type="audio/mpeg">
+</audio>
+<p class="small">Your personal voice recording will appear here.</p>
+</div>
+<button onclick="nextPage()">Final Surprise →</button>
+</section>
+
+<section class="page">
+<div class="card">
+<div class="heart">♡</div>
+<h1>Once Again...</h1>
+<h2>Happy Birthday!</h2>
+<p>May this year bring beautiful beginnings, unforgettable memories, countless blessings and all the happiness you deserve.</p>
+<p class="gold">Stay blessed. Stay happy. Always keep smiling.</p>
+<div class="decoration">✦ ♡ ✦ ♡ ✦</div>
+</div>
+<button onclick="restart()">Read Again ↺</button>
+</section>
+
+<script>
+let current=0;
+const pages=document.querySelectorAll('.page');
+
+function nextPage(){
+ if(current<pages.length-1){
+ pages[current].classList.remove('active');
+ current++;
+ pages[current].classList.add('active');
+ window.scrollTo(0,0);
+ }
+}
+function restart(){
+ pages[current].classList.remove('active');
+ current=0;
+ pages[current].classList.add('active');
+ window.scrollTo(0,0);
+}
+</script>
+
+</body>
+</html>
