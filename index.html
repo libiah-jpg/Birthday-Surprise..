@@ -4,253 +4,243 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A World Full of Wishes ♡</title>
+<title>A Birthday Full of Love ❤️</title>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
 *{box-sizing:border-box}
-body{
- margin:0;
- background:radial-gradient(ellipse at top,#762c40,#2b101b 65%,#10090d);
- color:#fff2e8;
- font-family:Georgia,serif;
- text-align:center;
- min-height:100vh;
-}
-.page{
- display:none;
- min-height:100vh;
- padding:55px 18px;
- align-items:center;
- justify-content:center;
- flex-direction:column;
- animation:fade .8s ease;
-}
-.page.active{display:flex}
-@keyframes fade{
- from{opacity:0;transform:translateY(18px)}
- to{opacity:1;transform:translateY(0)}
-}
-h1{color:#f4d49c;font-size:clamp(35px,7vw,57px);font-weight:normal}
-h2{color:#efc98d;font-weight:normal;font-size:30px}
-p{font-size:18px;line-height:1.9;max-width:680px;margin:13px auto}
-.card{
- max-width:740px;width:100%;
- padding:30px 23px;
- border:1px solid #cda46e;
- border-radius:23px;
- background:#ffffff0b;
- box-shadow:0 0 40px #d6a85c20;
-}
-button{
- background:linear-gradient(120deg,#d5aa6c,#f8dfae);
- color:#32121b;
- border:0;border-radius:35px;
- padding:14px 30px;
- font-size:16px;cursor:pointer;
- margin:20px 8px;font-weight:bold;
-}
-button:hover{transform:scale(1.04)}
-.gold{color:#f0c98c}
-.heart{font-size:55px;animation:pulse 1.6s infinite}
-@keyframes pulse{50%{transform:scale(1.18)}}
-.decor{color:#eac58b;letter-spacing:7px;margin:20px}
-.small{font-size:13px;color:#d9bba3}
-audio{width:100%;max-width:400px;margin:20px 0}
-.counter{color:#d8b88d;font-size:13px;margin-top:15px}
+body{margin:0;background:radial-gradient(circle at top,#792b48,#35101f 55%,#10090e);color:#fff7ec;font-family:'DM Sans',sans-serif;min-height:100vh}
+.wrap{min-height:100vh;display:flex;justify-content:center;align-items:center;padding:22px 12px}
+.card{width:min(760px,100%);padding:35px 28px;border:1px solid #dfbf7b;border-radius:25px;background:linear-gradient(145deg,#4a1024,#170d13);box-shadow:0 20px 70px #0008;position:relative}
+.card:after{content:"";position:absolute;inset:10px;border:1px solid #dfbf7b33;border-radius:17px;pointer-events:none}
+.page{display:none;animation:show .5s ease}
+.page.active{display:block}
+@keyframes show{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.kicker{text-align:center;color:#dfbf7b;font-size:10px;letter-spacing:3px;text-transform:uppercase}
+h1,h2{font-family:'Cormorant Garamond',serif;text-align:center;font-weight:500;color:#fff0d2}
+h1{font-size:clamp(45px,9vw,75px);line-height:1;margin:25px 0}
+h2{font-size:clamp(34px,7vw,52px);margin:15px 0}
+p{text-align:center;line-height:1.85;color:#f2dfd9;font-size:15px}
+.gold{color:#dfbf7b}
+.ornament{text-align:center;color:#dfbf7b;letter-spacing:8px;margin:20px}
+.btn{display:block;margin:25px auto 0;padding:13px 28px;border:1px solid #dfbf7b;border-radius:30px;background:linear-gradient(120deg,#d8b875,#f3dfae);color:#32101d;font-weight:bold;cursor:pointer;position:relative;z-index:2}
+.btn:hover{transform:translateY(-2px)}
+.scroll{max-height:310px;overflow-y:auto;padding:8px 14px;margin:20px 0;border:1px solid #dfbf7b66;border-radius:15px;background:#ffffff09;scrollbar-color:#dfbf7b #ffffff18}
+.item{text-align:center;padding:12px 5px;border-bottom:1px solid #dfbf7b30;font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff0d2}
+.item:last-child{border:0}
+.frame{max-width:390px;margin:20px auto;padding:9px;background:#fff7ec;border:1px solid #dfbf7b}
+.frame img{width:100%;max-height:420px;object-fit:contain;display:block}
+.audio{padding:20px;border:1px solid #dfbf7b77;border-radius:15px;margin:20px auto;max-width:440px;text-align:center}
+audio{width:100%;margin-top:15px}
+.heart{text-align:center;font-size:38px;margin:18px}
+.small{text-align:center;font-size:11px;color:#d9c3bc}
+.dots{display:flex;justify-content:center;gap:5px;flex-wrap:wrap;margin:22px auto 0}
+.dot{width:13px;height:5px;border-radius:8px;background:#ffffff35}
+.dot.on{background:#dfbf7b}
+@media(max-width:480px){.card{padding:30px 21px}.item{font-size:20px}}
 </style>
 </head>
-
 <body>
+<div class="wrap">
+<main class="card">
 
 <section class="page active">
-<div class="decor">✧ ✦ ✧ ♡ ✧ ✦ ✧</div>
+<div class="kicker">A little world made just for you</div>
+<div class="ornament">✦ ─── ♡ ─── ✦</div>
+<h1>Today is<br><span class="gold">all about you</span></h1>
+<p>Some days deserve more than an ordinary wish. This little surprise is filled with love, duas, sweet words and beautiful feelings. 🥹</p>
 <div class="heart">♡</div>
-<p class="gold">A little world created just for you...</p>
-<h1>HAPPY BIRTHDAY!</h1>
-<p>Today is your day! And I have so many wishes, prayers and beautiful words waiting for you.</p>
-<p>So take a deep breath, get comfortable and open your little surprise. ♡</p>
-<button onclick="nextPage()">LET'S BEGIN! ✨</button>
+<button class="btn" onclick="next()">Open your surprise ✨</button>
 </section>
 
 <section class="page">
-<div class="card">
-<h1>IT'S YOUR DAY!!</h1>
-<div class="heart">🎂</div>
-<p>Finally, the day we've been waiting for!</p>
-<p>Today deserves the biggest celebration, the happiest smiles and the sweetest memories.</p>
-<p>May this birthday be the beginning of something incredibly beautiful.</p>
-<p class="gold">I hope you feel just how special this day is! ♡</p>
+<div class="kicker">The celebration begins</div>
+<h2>Happiest Birthday!</h2>
+<p style="font-family:serif;font-size:25px">Mere janu ka birthday hai aaj! I am sooo much happy! ❤️</p>
+<div class="ornament">✧ ♡ ✧</div>
+<p>May your new year bring peaceful mornings, exciting opportunities, beautiful memories and a thousand reasons to smile.</p>
+<p class="gold">Today deserves to be extra special! 💗</p>
+<button class="btn" onclick="next()">Next surprise →</button>
+</section>
+
+<section class="page">
+<div class="kicker">A collection of wishes</div>
+<h2>Birthday wishes for you 💌</h2>
+<p>Scroll slowly. Lots of wishes are waiting!</p>
+<div class="scroll" id="wishes"></div>
+<button class="btn" onclick="next()">Keep going →</button>
+</section>
+
+<section class="page">
+<div class="kicker">Duas from my heart</div>
+<h2>May Allah bless you 🤍</h2>
+<div class="scroll">
+<div class="item">May Allah grant you good health and a peaceful heart. Ameen.</div>
+<div class="item">May every sincere dua find its beautiful answer.</div>
+<div class="item">May your rizq be halal, abundant and full of barakah.</div>
+<div class="item">May Allah protect you and guide every step.</div>
+<div class="item">May your parents always be a source of happiness.</div>
+<div class="item">May success come with humility and gratitude.</div>
+<div class="item">May your heart always stay close to Allah.</div>
+<div class="item">May every new day bring you closer to goodness.</div>
+<div class="item">May Allah fill your life with khair in this world and the next.</div>
+<div class="item">May you find ease after every difficulty. Ameen.</div>
+<div class="item">May Allah bless your time, efforts and dreams.</div>
+<div class="item">May your home always be filled with peace.</div>
 </div>
-<button onclick="nextPage()">NEXT SURPRISE →</button>
+<button class="btn" onclick="next()">A little more →</button>
 </section>
 
 <section class="page">
-<div class="card">
-<h2>A Thousand Duas For You</h2>
-<p>Ya Allah, bless this beautiful soul with a life full of goodness.</p>
-<p>Ya Allah, grant them good health, a peaceful heart and a beautiful destiny.</p>
-<p>May Allah make every difficult path easy.</p>
-<p>May every silent prayer find its answer.</p>
-<p>May Allah protect them from sadness, hardship and disappointment.</p>
-<p>May their coming years be filled with happiness and barakah.</p>
-<p>May their heart always find peace in remembering Allah.</p>
-<p>May Allah bless their family with health, love and protection.</p>
-<p>May every new morning bring hope and every evening bring peace.</p>
-<p>May Allah grant them success in this world and the Hereafter.</p>
-<p class="gold">Ameen Ya Rabb-ul-Alameen. ♡</p>
+<div class="kicker">A little memory</div>
+<h2>Moments worth keeping</h2>
+<p>Some pictures hold feelings words cannot explain.</p>
+<div class="frame"><img src="assets/your-photo.jpg" alt="A special picture"></div>
+<p class="small">We will set your actual picture filename here.</p>
+<button class="btn" onclick="next()">Next →</button>
+</section>
+
+<section class="page">
+<div class="kicker">A little appreciation</div>
+<h2>Things to celebrate about you</h2>
+<div class="scroll">
+<div class="item">Your kindness, even in little things.</div>
+<div class="item">Your efforts towards your dreams.</div>
+<div class="item">Your unique way of making moments special.</div>
+<div class="item">Your strength through challenging days.</div>
+<div class="item">Your sense of humour and lovely smile.</div>
+<div class="item">The care you show to people who matter.</div>
+<div class="item">Your patience and determination.</div>
+<div class="item">The person you are becoming every day.</div>
+<div class="item">Your little habits that make you, you.</div>
+<div class="item">Simply being wonderfully yourself. ❤️</div>
+<div class="item">Your dreams deserve every chance to bloom.</div>
+<div class="item">Your presence makes ordinary moments memorable.</div>
 </div>
-<button onclick="nextPage()">MORE DUAS →</button>
+<button class="btn" onclick="next()">More love →</button>
 </section>
 
 <section class="page">
-<div class="card">
-<h2>More Beautiful Prayers ♡</h2>
-<p>Ya Allah, bless their rizq with abundance and barakah.</p>
-<p>Grant them success in every halal effort.</p>
-<p>Open doors of opportunities they never imagined.</p>
-<p>Keep their intentions pure and their heart sincere.</p>
-<p>Protect them from evil eyes and every kind of harm.</p>
-<p>Surround them with sincere and kind-hearted people.</p>
-<p>Give them patience during difficult times.</p>
-<p>Replace every worry with peace and every fear with courage.</p>
-<p>Grant them strength to achieve their dreams.</p>
-<p>Let them always have reasons to say Alhamdulillah.</p>
-<p>May their home always be filled with love and mercy.</p>
-<p>May Allah guide every step towards what is best for them.</p>
-<p class="gold">Ameen, Sum Ameen. ❤️</p>
-</div>
-<button onclick="nextPage()">KEEP GOING →</button>
+<div class="kicker">A message repeated with love</div>
+<h2>100 little kisses 💋</h2>
+<p>Scroll down... every line is a tiny birthday kiss!</p>
+<div class="scroll" id="kisses"></div>
+<button class="btn" onclick="next()">One more list →</button>
 </section>
 
 <section class="page">
-<div class="card">
-<h2>For Every Coming Year</h2>
-<p>May the next 365 days bring unexpected happiness.</p>
-<p>May you discover new strengths within yourself.</p>
-<p>May your hard work turn into beautiful achievements.</p>
-<p>May your dreams become closer with every passing day.</p>
-<p>May you never lose hope in Allah's mercy.</p>
-<p>May you always be surrounded by people who genuinely wish you well.</p>
-<p>May your future be even more beautiful than your imagination.</p>
-<p>And whenever life gets difficult, may Allah give you the strength to keep going.</p>
-<h2 class="gold">Your best days are still ahead! ♡</h2>
-</div>
-<button onclick="nextPage()">NEXT →</button>
+<div class="kicker">Three little words</div>
+<h2>I love you, again & again ❤️</h2>
+<p>Some feelings deserve to be said a hundred times.</p>
+<div class="scroll" id="loves"></div>
+<button class="btn" onclick="next()">Keep going →</button>
 </section>
 
 <section class="page">
-<div class="card">
-<h1>EXTRA EXTRA WISHES!!</h1>
-<p>Wishing you a day full of laughter!</p>
-<p>A year full of achievements!</p>
-<p>A heart full of contentment!</p>
-<p>A life full of beautiful surprises!</p>
-<p>Endless reasons to smile!</p>
-<p>Beautiful memories to remember!</p>
-<p>Little moments that become your favourite stories!</p>
-<p>And happiness that stays longer than you ever expected!</p>
-<div class="heart">🎉</div>
-<h2 class="gold">YOU DESERVE ALL THE GOODNESS!</h2>
-</div>
-<button onclick="nextPage()">ANOTHER SURPRISE →</button>
+<div class="kicker">Written with love</div>
+<h2>A little piece of my heart</h2>
+<p>My handwritten letter, especially for you. 💌</p>
+<div class="frame"><img src="assets/letter.jpg" alt="My handwritten letter"></div>
+<p class="small">We will set your actual letter photo filename here.</p>
+<button class="btn" onclick="next()">Next surprise →</button>
 </section>
 
 <section class="page">
-<div class="card">
-<h2>A Little Something From My Heart</h2>
-<p>I hope you always know how valuable your happiness is.</p>
-<p>I wish you could see yourself through the kindness and goodness that make you special.</p>
-<p>May you never have to question your worth.</p>
-<p>May life give you beautiful reasons to smile even on ordinary days.</p>
-<p>And may every year remind you how much goodness is still waiting for you.</p>
-<p class="gold">You deserve a lifetime of beautiful moments. ♡</p>
-</div>
-<button onclick="nextPage()">READ MY LETTER →</button>
-</section>
-
-<section class="page">
-<div class="card">
-<h1>A LETTER FOR YOU</h1>
-<p>Dear You,</p>
-<p>Words can never fully express how much happiness I wish for you.</p>
-<p>I hope this little surprise brings a smile to your face and makes your birthday a little more memorable.</p>
-<p>I wish you countless peaceful mornings, beautiful evenings and moments that make your heart feel grateful.</p>
-<p>May Allah always guide you, protect you and bless you with everything that is truly good for you.</p>
-<p>Thank you for being a beautiful part of my world.</p>
-<p class="gold">With all my heartfelt wishes and prayers. ♡</p>
-</div>
-<button onclick="nextPage()">ONE MORE THING →</button>
-</section>
-
-<section class="page">
-<div class="card">
-<h2>A Little Melody For You ♫</h2>
-<div class="heart">♪ ♡ ♪</div>
-<p>I wanted to add a song to this little celebration, something that makes this moment even more memorable.</p>
-<p class="gold">Your special birthday song:</p>
-<audio controls>
-<source src="song.mp3" type="audio/mpeg">
+<div class="kicker">A message in my own voice</div>
+<h2>Hear my voice 💌</h2>
+<p>I wanted this birthday wish to reach you in my own voice, too.</p>
+<div class="audio">
+<div class="gold">A voice note, especially for you</div>
+<audio controls preload="metadata">
+<source src="assets/voice.ogg" type="audio/ogg">
 Your browser does not support audio.
 </audio>
-<p class="small">Our special song ♡</p>
+<p class="small">We will set your exact audio filename here.</p>
 </div>
-<button onclick="nextPage()">HEAR MY VOICE →</button>
+<button class="btn" onclick="next()">Next →</button>
 </section>
 
 <section class="page">
-<div class="card">
-<h2>A Voice Wish, Just For You</h2>
-<div class="heart">🎙️</div>
-<p>Because some feelings are better expressed through a voice than written words.</p>
-<p>Listen to this little birthday wish, recorded especially for you.</p>
-<audio controls>
-<source src="voice-note.mp3" type="audio/mpeg">
-Your browser does not support audio.
-</audio>
-<p class="gold">A little voice, a lot of wishes. ♡</p>
+<div class="kicker">For the year ahead</div>
+<h2>Little wishes for your future</h2>
+<div class="scroll">
+<div class="item">Keep believing in the goodness Allah has planned.</div>
+<div class="item">Celebrate every little achievement.</div>
+<div class="item">Give yourself credit for how far you have come.</div>
+<div class="item">Never stop learning and growing.</div>
+<div class="item">Choose peace whenever you can.</div>
+<div class="item">Make time for family, faith and things you love.</div>
+<div class="item">Be gentle with yourself on difficult days.</div>
+<div class="item">Keep making beautiful memories.</div>
+<div class="item">May your goals become beautiful achievements.</div>
+<div class="item">May your future be full of khair. Ameen.</div>
 </div>
-<button onclick="nextPage()">FINAL SURPRISE →</button>
+<button class="btn" onclick="next()">Final surprise →</button>
 </section>
 
 <section class="page">
-<div class="card">
-<div class="decor">✦ ✧ ✦ ♡ ✦ ✧ ✦</div>
-<div class="heart">♥</div>
-<h1>HAPPY BIRTHDAY!</h1>
-<h2>One Last Dua...</h2>
-<p>May Allah make this new chapter of your life more beautiful than the last.</p>
-<p>May you always have health, peace, faith, happiness and people who sincerely care for you.</p>
-<p>May every good thing you pray for find its way to you at the perfect time.</p>
-<p>May your smile never lose its light.</p>
-<h2 class="gold">Ameen. Ameen. Ameen. ♡</h2>
-<p>Once again, a very very HAPPY BIRTHDAY!</p>
-<div class="decor">♡ ✧ ♡ ✧ ♡</div>
-</div>
-<button onclick="restart()">READ ALL OVER AGAIN ↺</button>
+<div class="kicker">With all my best wishes</div>
+<div class="ornament">♡ ✦ ♡</div>
+<h1>Keep smiling,<br><span class="gold">always.</span></h1>
+<p>May Allah grant you what is best for you, in the most beautiful way. May your days be full of barakah, love, laughter and peace. Ameen.</p>
+<div class="heart">💋💋💋</div>
+<p class="gold" style="font-family:serif;font-size:27px">Ummmmmaaaaaah! ❤️</p>
+<p class="small">Made with love, just for you.</p>
+<button class="btn" onclick="restart()">Watch again ↺</button>
 </section>
 
-<div class="counter" id="counter">SURPRISE 1 OF 12</div>
+<div class="dots" id="dots"></div>
+</main>
+</div>
 
 <script>
 let current=0;
-const pages=document.querySelectorAll('.page');
-const counter=document.getElementById('counter');
+const pages=[...document.querySelectorAll('.page')];
+const dots=document.getElementById('dots');
 
-function nextPage(){
- if(current<pages.length-1){
- pages[current].classList.remove('active');
- current++;
- pages[current].classList.add('active');
- counter.innerText="SURPRISE "+(current+1)+" OF "+pages.length;
- window.scrollTo(0,0);
- }
+function drawDots(){
+dots.innerHTML=pages.map((p,i)=>`<span class="dot ${i===current?'on':''}"></span>`).join('');
 }
-function restart(){
- pages[current].classList.remove('active');
- current=0;
- pages[current].classList.add('active');
- counter.innerText="SURPRISE 1 OF "+pages.length;
- window.scrollTo(0,0);
+function showPage(){
+pages.forEach((p,i)=>p.classList.toggle('active',i===current));
+drawDots();
+window.scrollTo({top:0,behavior:'smooth'});
 }
+function next(){
+if(current<pages.length-1){current++;showPage();}
+}
+function restart(){current=0;showPage();}
+
+const wishes=[
+"May your birthday begin the happiest chapter of your life. ❤️",
+"May every good dream find its way to you.",
+"May your hard work turn into beautiful achievements.",
+"May your heart always have reasons to feel grateful.",
+"May laughter visit your days again and again.",
+"May Allah keep you safe, healthy and content. Ameen.",
+"May every coming year be kinder and brighter.",
+"May you always feel valued, respected and appreciated.",
+"May your home be filled with peace and happiness.",
+"May the best of your days still be ahead of you.",
+"May you meet good people and find goodness everywhere.",
+"May your hopes stay alive and your faith stay strong.",
+"May you never run out of reasons to smile.",
+"May your efforts bring results beyond your expectations.",
+"May Allah open doors of khair for you. Ameen.",
+"May your life be rich in faith and beautiful memories.",
+"May every worry become lighter.",
+"May this birthday feel truly special.",
+"May Allah bless your time and protect your happiness.",
+"May your heart always find peace."
+];
+document.getElementById('wishes').innerHTML=wishes.map((x,i)=>`<div class="item">${i+1}. ${x}</div>`).join('');
+
+document.getElementById('kisses').innerHTML=
+Array.from({length:100},(_,i)=>`<div class="item">${i+1}. Ummmmaaaaaahhh 💋</div>`).join('');
+
+document.getElementById('loves').innerHTML=
+Array.from({length:100},(_,i)=>`<div class="item">${i+1}. I love you ❤️</div>`).join('');
+
+drawDots();
 </script>
 </body>
 </html>
